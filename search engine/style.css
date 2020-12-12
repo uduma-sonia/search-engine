@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Felipa&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 10vh;
+  width: 40vw;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(104, 104, 104);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 {
+  letter-spacing: 4px;
+  font-family: "Felipa", cursive;
+}
+
+.search {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #111;
+  z-index: 1;
+  background: white;
+}
+
+.fa-search {
+  font-size: 2rem;
+}
+
+input {
+  width: 40%;
+  border-radius: 5em;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.searchbutton {
+  padding: 0.5rem 3rem;
+  margin-left: 10px;
+  border-radius: 5em;
+  background-color: rgb(0, 121, 121);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.searchbutton:hover,
+.next:hover,
+.gallery a:hover {
+  background-color: rgba(0, 121, 121, 0.877);
+}
+
+.next {
+  position: fixed;
+  font-weight: 700;
+  top: 90%;
+  right: 0%;
+  border-radius: 5em;
+  background-color: rgb(0, 121, 121);
+  padding: 0.5rem;
+  border: 1px solid black;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery {
+  width: 90%;
+  margin: 12vh 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.gallery div {
+  position: relative;
+}
+
+.gallery img {
+  margin-left: 5px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 5px black);
+}
+
+.gallery p {
+  position: absolute;
+  margin-left: 10px;
+  bottom: 5px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.gallery a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(2, 102, 102);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #111;
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
