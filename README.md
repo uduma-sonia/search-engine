@@ -1,2 +1,2 @@
 # search-engine
-search engine for photos, created using API from Pexels
+A search engine for photos where users can download images and use for their projects
